@@ -25,8 +25,8 @@ docs/needtable
 :maxdepth: 1
 :caption: Software Design
 
-docs/sw_design
-docs/doxygen/api
+docs/doxygen/demo/html/index
+```
 
 ```{toctree}
 :hidden:

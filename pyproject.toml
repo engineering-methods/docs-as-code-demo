@@ -79,7 +79,7 @@ cmd = "poetry build"
 
 [tool.poe.tasks.clean]
 help = "cleans the .build and dist directories"
-cmd = "rm -rf .build/ dist/"
+cmd = "rm -rf .build/ dist/ && echo cleaned!"
 
 [tool.poe.tasks.lint]
 help = "runs all linting/qa tasks over all files"
