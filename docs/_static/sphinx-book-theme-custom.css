@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200;300;400;500;600;700');
+
+html {
+    --pst-font-family-base-system: "Encode Sans", -apple-system, BlinkMacSystemFont, Segoe UI, "Helvetica Neue",
+        Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+@media (min-width: 1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 100% !important;
+    }
+}
+
+body {
+    font-family: "Encode Sans";
+    background-color: white;
+}
+
+div.bd-container {
+    justify-content: left;
+}
+
+/* navigation bar color override */
+.bd-sidebar {
+    background: whitesmoke;
+}
+
+#search-input {
+    border-radius: .3em
+}
+
+div.need_container {
+    box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.1) !important;
+}
+
+table.need td {
+    border: 1px solid lightgray !important;
+    background-color: #FAFAFA;
+}
+
+table.need td .head {
+    background-color: white
+}
+
+table.need td .need .meta {
+    color: #F5F5F5;
+}
+
+table.need td.need.meta div.line {
+    font-weight: 300;
+}
+
+table.need td.need.meta div.line span.needs_data {
+    font-weight: 500;
+}
+
+table.need td.need.meta div.line a.reference.internal {
+    font-weight: 500;
+}
+
+table.need td.need.meta div.line .needs_data_container .needs_data {
+    background: #d3ebf3;
+    border-radius: 5px;
+    padding: 0 5px;
+}

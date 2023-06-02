@@ -1,0 +1,19 @@
+[flake8]
+max-line-length = 120
+ignore = D203, D301, W503, C408
+exclude = .git,
+    .build,
+    .devcontainer,
+    .github,
+    .idea,
+    .package,
+    .pytest_cache,
+    .venv,
+    .vscode,
+    dist,
+    docs,
+    tests
+max-complexity = 10
+select = D,C,E,F,W,B,B950
+extend-ignore = E203, E501
+docstring-convention=pep257

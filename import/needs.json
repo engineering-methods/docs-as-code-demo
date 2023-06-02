@@ -1,0 +1,154 @@
+{
+    "created": "2023-06-02T15:13:40.288215",
+    "current_version": "0.0.1",
+    "project": "DEMO DOORS EXPORT",
+    "versions": {
+        "1.0": {
+            "created": "2023-06-02T15:13:40.288202",
+            "filters": {},
+            "filters_amount": 0,
+            "needs": {
+                "SYS-REQ-001": {
+                    "id": "SYS-REQ-001",
+                    "type": "sys_req",
+                    "type_name": "System Requirement",
+                    "title": "Power Distribution",
+                    "description": "The electrical subsystem must distribute power efficiently and reliably to all vehicle components.",
+                    "content_id": "SYS-REQ-001",
+                    "is_need": true,
+                    "tags": [
+                        "electrical",
+                        "external",
+                        "doors"
+                    ]
+                },
+                "SYS-REQ-002": {
+                    "id": "SYS-REQ-002",
+                    "type": "sys_req",
+                    "type_name": "System Requirement",
+                    "title": "Battery Capacity",
+                    "description": "The electrical subsystem must include a high-capacity battery to meet the power demands of the vehicle.",
+                    "content_id": "SYS-REQ-002",
+                    "is_need": true,
+                    "tags": [
+                        "electrical",
+                        "external",
+                        "doors"
+                    ]
+                },
+                "SYS-REQ-003": {
+                    "id": "SYS-REQ-003",
+                    "type": "sys_req",
+                    "type_name": "System Requirement",
+                    "title": "Electrical Safety",
+                    "description": "The electrical subsystem must implement safety measures to prevent electrical hazards and ensure user safety.",
+                    "content_id": "SYS-REQ-003",
+                    "is_need": true,
+                    "tags": [
+                        "electrical",
+                        "external",
+                        "doors"
+                    ]
+                },
+                "SYS-REQ-004": {
+                    "id": "SYS-REQ-004",
+                    "type": "sys_req",
+                    "type_name": "System Requirement",
+                    "title": "Wiring Harness",
+                    "description": "The electrical subsystem must have a well-designed and organized wiring harness for efficient electrical connectivity.",
+                    "content_id": "SYS-REQ-004",
+                    "is_need": true,
+                    "tags": [
+                        "electrical",
+                        "external",
+                        "doors"
+                    ]
+                },
+                "SYS-REQ-005": {
+                    "id": "SYS-REQ-005",
+                    "type": "sys_req",
+                    "type_name": "System Requirement",
+                    "title": "Voltage Regulation",
+                    "description": "The electrical subsystem must regulate voltage levels to ensure proper operation of electrical components.",
+                    "content_id": "SYS-REQ-005",
+                    "is_need": true,
+                    "tags": [
+                        "electrical",
+                        "external",
+                        "doors"
+                    ]
+                },
+                "SYS-REQ-006": {
+                    "id": "SYS-REQ-006",
+                    "type": "sys_req",
+                    "type_name": "System Requirement",
+                    "title": "Electromagnetic Compatibility (EMC)",
+                    "description": "The electrical subsystem must comply with EMC standards to minimize electromagnetic interference and ensure reliable operation of other vehicle systems.",
+                    "content_id": "SYS-REQ-006",
+                    "is_need": true,
+                    "tags": [
+                        "electrical",
+                        "external",
+                        "doors"
+                    ]
+                },
+                "SYS-REQ-007": {
+                    "id": "SYS-REQ-007",
+                    "type": "sys_req",
+                    "type_name": "System Requirement",
+                    "title": "Fault Detection",
+                    "description": "The electrical subsystem must be capable of detecting and reporting faults or malfunctions in electrical components.",
+                    "content_id": "SYS-REQ-007",
+                    "is_need": true,
+                    "tags": [
+                        "electrical",
+                        "external",
+                        "doors"
+                    ]
+                },
+                "SYS-REQ-008": {
+                    "id": "SYS-REQ-008",
+                    "type": "sys_req",
+                    "type_name": "System Requirement",
+                    "title": "Power Management",
+                    "description": "The electrical subsystem must implement efficient power management strategies to optimize power usage and maximize energy efficiency.",
+                    "content_id": "SYS-REQ-008",
+                    "is_need": true,
+                    "tags": [
+                        "electrical",
+                        "external",
+                        "doors"
+                    ]
+                },
+                "SYS-REQ-009": {
+                    "id": "SYS-REQ-009",
+                    "type": "sys_req",
+                    "type_name": "System Requirement",
+                    "title": "Electrical Component Compatibility",
+                    "description": "The electrical subsystem must ensure compatibility and seamless integration with various electrical components and systems in the vehicle.",
+                    "content_id": "SYS-REQ-009",
+                    "is_need": true,
+                    "tags": [
+                        "electrical",
+                        "external",
+                        "doors"
+                    ]
+                },
+                "SYS-REQ-010": {
+                    "id": "SYS-REQ-010",
+                    "type": "sys_req",
+                    "type_name": "System Requirement",
+                    "title": "Serviceability",
+                    "description": "The electrical subsystem must be designed for ease of maintenance and serviceability, allowing for efficient troubleshooting and repair.",
+                    "content_id": "SYS-REQ-010",
+                    "is_need": true,
+                    "tags": [
+                        "electrical",
+                        "external",
+                        "doors"
+                    ]
+                }
+            }
+        }
+    }
+}

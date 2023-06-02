@@ -1,0 +1,94 @@
+[tool.poetry]
+name = "docs_as_code_demo"
+version = "0.0.1"
+description = "!YOUR DESCRIPTION HERE!"
+authors = ["markus braun <markus.braun@em.ag>"]
+maintainers = ["markus braun <markus.braun@em.ag>"]
+license = "MIT"
+homepage = "https://www.github.com/engineering-methods/docs-as-code-demo"
+repository = "https://www.github.com/engineering-methods/docs-as-code-demo"
+documentation = "https://www.github.com/engineering-methods/docs-as-code-demo"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.12"
+sphinx-needs = "^1.2.2"
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^6"
+pillow = "^9.5.0"
+myst-parser = "^1.0.0"
+sphinxcontrib-plantuml = "^0.25"
+sphinx-toolbox = "^3.4.0"
+sphinx-autoapi = "^2.1.0"
+sphinx-copybutton = "^0.5.2"
+sphinx-design = "^0.4.1"
+sphinx-book-theme = "^1.0.1"
+doxysphinx = "^3.3.3"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.0.1"
+tag_format = "v$version"
+version_files = [
+    "pyproject.toml:^version",
+    "em/docs_as_code_demo/__init__.py:^__version__",
+]
+bump_message = """chore(release): release $current_version → $new_version by commitizen [skip-ci]
+
+Signed-off-by: github-actions <actions@github.com>
+"""
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+log_level = "DEBUG"
+testpaths = ["tests"]
+junit_logging = "out-err"
+markers = ["speed: manual speed tests"]
+addopts = "-m 'not speed'"
+
+[tool.black]
+line-length = 120
+target-version = ['py38']
+# black doesn't need further excludes because it honors the .gitignore file
+extend-exclude = "(docs/)|(\\.vscode)|(\\.idea)|(\\.devcontainer)"
+
+[tool.isort]
+profile = "black"
+
+[tool.poe.tasks.doxygen]
+help = "generates the doxygen documentation to docs/doxygen."
+cmd = "doxygen src/demo.doxyfile"
+
+[tool.poe.tasks.doxysphinx]
+help = "generates rsts out of the doxygen documentation."
+cmd = "doxysphinx --verbosity=DEBUG build . .build/html src/demo.doxyfile"
+deps = ["doxygen"]
+
+[tool.poe.tasks.docs]
+help = "generate the documentation html to .build/ directory"
+cmd = "sphinx-build -M html . .build -j 'auto' --keep-going"
+deps = ["doxysphinx"]
+
+[tool.poe.tasks.build]
+help = "build package into dist/ directory"
+cmd = "poetry build"
+
+[tool.poe.tasks.clean]
+help = "cleans the .build and dist directories"
+cmd = "rm -rf .build/ dist/"
+
+[tool.poe.tasks.lint]
+help = "runs all linting/qa tasks over all files"
+cmd = "pre-commit run --all-files"
+
+[tool.poe.tasks.test]
+help = "runs all pytest unit-tests"
+cmd = "pytest"
+
+[tool.poe.tasks.cover]
+help = "runs all pytest unit-tests with coverage"
+cmd = "pytest --cov"

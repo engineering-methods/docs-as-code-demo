@@ -1,0 +1,12 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: b6ce451
+_src_path: https://github.com/engineering-methods/python_template
+author: markus braun <markus.braun@em.ag>
+doc_url: 'https://engineering-methods.github.io/docs-as-code-demo
+
+    '
+hosting: github
+license: MIT
+package_name: docs_as_code_demo
+project_name: docs-as-code-demo
+repo_url: https://www.github.com/engineering-methods/docs-as-code-demo
