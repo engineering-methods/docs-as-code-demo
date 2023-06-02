@@ -36,7 +36,7 @@ jobs:
         with:
           version: 1.9.7
       - name: plantuml-install
-        shell: |
+        run: |
           sudo apt-get install -y default-jre graphviz wget
           wget -c https://netcologne.dl.sourceforge.net/project/plantuml/plantuml.jar -O /tmp/plantuml.jar
           mkdir -p /usr/share/plantuml
@@ -48,10 +48,10 @@ jobs:
       - name: Setup Poetry
         uses: Gr1N/setup-poetry@v8
       - name: Install dependencies
-        shell: |
+        run: |
           poetry install --with ci
       - name: Build Documentation
-        shell: |
+        run: |
           poe docs
       - name: Setup Pages
         uses: actions/configure-pages@v3
