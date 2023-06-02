@@ -31,11 +31,9 @@ docs/doxygen/demo/html/index
 ```{toctree}
 :hidden:
 :maxdepth: 1
-:caption: Guides
+:caption: Usage
 
 docs/getting_started.md
-docs/faq.md
-docs/dev_guide.md
 ```
 
 ## Welcome to the Docs-As-Code Demo
