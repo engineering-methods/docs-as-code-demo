@@ -52,7 +52,8 @@ jobs:
           mv /tmp/plantuml.jar /usr/share/plantuml/plantuml.jar
       - name: Install dependencies
         run: |
-          poetry install --with ci
+          poetry install
+          pipx install poethepoet
       - name: Build Documentation
         run: |
           poe docs
