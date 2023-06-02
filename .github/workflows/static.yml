@@ -42,7 +42,8 @@ jobs:
       - name: Setup Poetry
         uses: Gr1N/setup-poetry@v8
       - name: Setup Java
-        uses: fleshgrinder/setup-java@main
+        run: |
+          apt install -y default-jre
       - name: Setup Graphviz
         uses: ts-graphviz/setup-graphviz@v1
       - name: plantuml-install
