@@ -12,10 +12,10 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.8,<3.12"
-sphinx-needs = "^1.2.2"
 
 [tool.poetry.group.docs.dependencies]
 sphinx = "^6"
+sphinx-needs = "^1.2.2"
 pillow = "^9.5.0"
 myst-parser = "^1.0.0"
 sphinxcontrib-plantuml = "^0.25"
@@ -25,6 +25,11 @@ sphinx-copybutton = "^0.5.2"
 sphinx-design = "^0.4.1"
 sphinx-book-theme = "^1.0.1"
 doxysphinx = "^3.3.3"
+
+[tool.poetry.group.ci]
+optional = true
+[tool.poetry.group.ci.dependencies]
+poethepoet = "^0.20.0"
 
 [tool.commitizen]
 name = "cz_conventional_commits"
