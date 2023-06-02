@@ -69,8 +69,8 @@ table.need td.need.meta div.line .needs_data_container .needs_data {
     padding: 0 5px;
 }
 
-/* fix for needs in doxygen pages
-.bd-content .doxygen-content .contents table:not(.memberdecls):not(.mlabels):not(.fieldtable):not(.memname),
-.doxygen-content .contents table:not(.memberdecls):not(.mlabels):not(.fieldtable):not(.memname) tbody {
-    display: contents !important;
-}*/
+/* doxygen fixes */
+.doxygen-content .need div.line:after {
+    content: unset;
+    white-space: unset;
+}

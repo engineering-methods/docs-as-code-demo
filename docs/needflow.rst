@@ -6,16 +6,17 @@ Graph for "safety" tag
 
 .. needflow::
    :tags: safety
-   :show_links:
+   :show_link_names:
 
 Graph for "infotainment" tag
 ----------------------------
 
 .. needflow::
    :tags: infotainment
-   :show_lins:
+   :show_link_names:
 
-Full Table
+Full Graph
 ----------
 
 .. needflow::
+   :show_link_names:

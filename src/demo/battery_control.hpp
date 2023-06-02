@@ -35,6 +35,7 @@ namespace demo {
      *
      * .. sw_class:: BatteryControl
      *    :id: SW-CLS-BATTERY
+     *    :status: implemented
      *    :implements: SW-COMP-012
      * ```
      *

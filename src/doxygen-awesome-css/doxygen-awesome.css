@@ -1713,7 +1713,7 @@ dl.reflist dd {
 
 .contents table:not(.memberdecls):not(.mlabels):not(.fieldtable):not(.memname),
 .contents table:not(.memberdecls):not(.mlabels):not(.fieldtable):not(.memname) tbody {
-    display: inline-block;
+    /* display: inline-block; */
     max-width: 100%;
 }
 
