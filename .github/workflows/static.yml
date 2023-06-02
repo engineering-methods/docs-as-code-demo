@@ -43,9 +43,7 @@ jobs:
         uses: Gr1N/setup-poetry@v8
       - name: Setup Java
         run: |
-          sudo apt-get -y default-jre
-      - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@v1
+          sudo apt-get install --no-install-recommends -y default-jre graphviz
       - name: plantuml-install
         run: |
           wget -c https://netcologne.dl.sourceforge.net/project/plantuml/plantuml.jar -O /tmp/plantuml.jar
