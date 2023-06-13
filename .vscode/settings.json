@@ -72,5 +72,6 @@
     },
     "esbonio.sphinx.confDir": "${workspaceFolder}",
     "esbonio.sphinx.buildDir": "${workspaceFolder}/.build",
-    "esbonio.sphinx.srcDir": "${workspaceFolder}"
+    "esbonio.sphinx.srcDir": "${workspaceFolder}",
+    "liveServer.settings.root": "/.build/html",
 }

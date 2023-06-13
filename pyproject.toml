@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "docs_as_code_demo"
 version = "0.0.1"
-description = "!YOUR DESCRIPTION HERE!"
+description = "Docs As Code Demo for the EPD 2023 Breakout Session"
 authors = ["markus braun <markus.braun@em.ag>"]
 maintainers = ["markus braun <markus.braun@em.ag>"]
 license = "MIT"
@@ -72,12 +72,15 @@ cmd = "doxygen src/demo.doxyfile"
 [tool.poe.tasks.doxysphinx]
 help = "generates rsts out of the doxygen documentation."
 cmd = "doxysphinx --verbosity=DEBUG build . .build/html src/demo.doxyfile"
-deps = ["doxygen"]
 
-[tool.poe.tasks.docs]
+[tool.poe.tasks.sphinx]
 help = "generate the documentation html to .build/ directory"
 cmd = "sphinx-build -M html . .build -j 'auto' --keep-going"
-deps = ["doxysphinx"]
+
+[tool.poe.tasks.docs]
+help = "builds the full documentation in sequence: doxygen, doxysphinx, sphinx"
+cmd = "sphinx-build -M html . .build -j 'auto' --keep-going"
+deps = ["doxygen", "doxysphinx", "sphinx"]
 
 [tool.poe.tasks.build]
 help = "build package into dist/ directory"

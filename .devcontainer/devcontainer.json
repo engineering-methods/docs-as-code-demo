@@ -54,8 +54,8 @@
         "ExecutableBookProject.myst-highlight",
         "DavidAnson.vscode-markdownlint",
         "tamasfe.even-better-toml",
-        "lextudio.restructuredtext",
-        "trond-snekvik.simple-rst"
+        "ritwickdey.LiveServer"
+        // currently not working in this workspace: "lextudio.restructuredtext",
       ]
     }
   },
