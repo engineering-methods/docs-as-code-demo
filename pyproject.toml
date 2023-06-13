@@ -25,6 +25,7 @@ sphinx-copybutton = "^0.5.2"
 sphinx-design = "^0.4.1"
 sphinx-book-theme = "^1.0.1"
 doxysphinx = "^3.3.3"
+esbonio = "^0.16.1"
 
 [tool.poetry.group.ci]
 optional = true

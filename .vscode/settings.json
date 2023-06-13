@@ -70,4 +70,7 @@
     "[restructuredtext]": {
         "editor.tabSize": 3
     },
+    "esbonio.sphinx.confDir": "${workspaceFolder}",
+    "esbonio.sphinx.buildDir": "${workspaceFolder}/.build",
+    "esbonio.sphinx.srcDir": "${workspaceFolder}"
 }

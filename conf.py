@@ -71,6 +71,7 @@ def theme_options(theme: str) -> Dict[str, Any]:
             "use_download_button": False,
             "repository_branch": "main",
             "home_page_in_toc": True,
+            "navbar_end": ["navbar-icon-links"],
         }
 
     elif theme == "sphinx_rtd_theme":
@@ -155,6 +156,7 @@ exclude_patterns = multi_glob(
 # Configure HTML theme (remember to also change doxysphinx)
 html_theme = "sphinx_book_theme"
 html_theme_options = theme_options(html_theme)
+html_context = {"default_mode": "light"}
 html_static_path = ["docs/_static/"]
 html_title = project
 html_css_files = [f"{html_theme.replace('_', '-')}-custom.css"]

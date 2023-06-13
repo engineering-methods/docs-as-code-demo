@@ -25,8 +25,6 @@ Stakeholder Requirements
    - The car must have rearview cameras and blind spot monitoring systems to enhance visibility and minimize
      the risk of accidents.
 
-
-
 .. stk_req:: Infotainment
    :id: STK-REQ-002
    :tags: connectivity, infotainment
