@@ -51,18 +51,19 @@ Stakeholder Requirements
      individuals with back pain.
    - The vehicle's cabin should have effective noise reduction measures to provide a quiet and serene driving
      environment.
-   - The vehicle should have ample storage compartments, including a spacious trunk, to accommodate luggage and
-   other belongings.
+   - The vehicle should have ample storage compartments, including a spacious trunk, to accommodate luggage
+     and other belongings.
 
 .. stk_req:: Engine
    :id: STK-REQ-004
    :tags: performance, acceleration, fuel efficiency, eco-friendly
 
-   - The vehicle should offer quick acceleration to ensure a smooth merging and overtaking experience on highways.
-   - The vehicle should have a hybrid or electric powertrain option to promote fuel efficiency and reduce carbon
-   emissions.
+   - The vehicle should offer quick acceleration to ensure a smooth merging and overtaking experience on
+     highways.
+   - The vehicle should have a hybrid or electric powertrain option to promote fuel efficiency and reduce
+     carbon emissions.
    - The electric vehicle variant should have a minimum range of 250 miles on a full charge to address range
-   anxiety concerns.
+     anxiety concerns.
 
 .. stk_req:: Durability
    :id: STK-REQ-005

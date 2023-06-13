@@ -11,7 +11,7 @@ from typing import Any, Dict, List
 
 sys.path.append(os.path.abspath("."))
 
-# == Helper functions ========================================================================================
+# == Helper functions ==================================================================================================
 
 
 def version_from_project_toml() -> str:
@@ -58,7 +58,7 @@ def theme_options(theme: str) -> Dict[str, Any]:
     """Get the theme options dict for a given supported theme."""
     supported_themes = ["sphinx_book_theme", "sphinx_rtd_theme"]
     if theme not in supported_themes:
-        raise Exception(f"theme {theme} is not supported by docs-as-code-demo. " f"Must be one of {supported_themes}.")
+        raise Exception(f"theme {theme} is not supported by docs-as-code-demo. Must be one of {supported_themes}.")
 
     if theme == "sphinx_book_theme":
         return {
@@ -71,7 +71,6 @@ def theme_options(theme: str) -> Dict[str, Any]:
             "use_download_button": False,
             "repository_branch": "main",
             "home_page_in_toc": True,
-            "navbar_end": ["navbar-icon-links"],
         }
 
     elif theme == "sphinx_rtd_theme":
@@ -82,41 +81,11 @@ def theme_options(theme: str) -> Dict[str, Any]:
             "repository_url": "https://www.github.com/engineering-methods/docs-as-code-demo",
             "logo_only": False,
         }
-    elif theme == "sphinx_immaterial":
-        # EXPERIMENTAL - THIS WILL NOT WORK OUT OF THE BOX
-        # -> As sphinx immaterial will monkey patch sphinx it maybe the case that this theme is only compatible
-        #    with the latest sphinx version. It will crash with "synopses" key errors in sphinx 6.
-        #    this can be solved by patching sphinx_immaterial at /apidoc/generic_synopses.py and
-        #    /apidoc/python/synopses.py to check for the key before calling self.data["synopses"]. However
-        #    as the theme also looks somewhat weired when that's done this is deactivated for now.
-        return {
-            "repo_url": "https://www.github.com/engineering-methods/docs-as-code-demo",
-            "icon": {
-                "repo": "fontawesome/brands/github",
-                "edit": "material/file-edit-outline",
-            },
-            "features": [
-                "content.tabs.link",
-                "header.autohide",
-                # "navigation.instant",
-                # "navigation.sections",
-                # "navigation.tabs",
-                # "navigation.tabs.sticky",
-                # "navigation.tracking",
-            ],
-            "palette": {"scheme": "default", "primary": "lime", "accent": "light-blue"},
-            "font": {
-                "text": "Encode Sans",  # used for all the pages' text
-                "code": "Source Code Pro",  # used for literal code blocks
-            },
-            "object_description_options": [(".*", {"include_in_toc": False, "generate_synopses": None})],
-        }
-
     else:
         raise Exception(f"theme '{theme}' is not supported. Please edit conf.py:theme_options function to add support.")
 
 
-# == Configuration ===========================================================================================
+# == Configuration =====================================================================================================
 
 # General information about the project.
 project = "docs-as-code-demo"
@@ -128,7 +97,7 @@ html_show_copyright = False
 version = version_from_project_toml()
 release = version_from_project_toml()
 
-# -- General configuration -----------------------------------------------------------------------------------
+# -- General configuration ---------------------------------------------------------------------------------------------
 source_suffix = ".rst"
 # master_doc = "docs/index"
 language = "en"
@@ -150,13 +119,13 @@ exclude_patterns = multi_glob(
     "external/README.md",
     "tests",
     "src/demo",
+    "src/doxygen-awesome-css",
 )
 
-# -- Options for HTML output ---------------------------------------------------------------------------------
+# -- Options for HTML output -------------------------------------------------------------------------------------------
 # Configure HTML theme (remember to also change doxysphinx)
 html_theme = "sphinx_book_theme"
 html_theme_options = theme_options(html_theme)
-html_context = {"default_mode": "light"}
 html_static_path = ["docs/_static/"]
 html_title = project
 html_css_files = [f"{html_theme.replace('_', '-')}-custom.css"]
@@ -166,7 +135,8 @@ html_last_updated_fmt = last_updated_from_git()
 
 github_username = "anyone"  # these just need to be set that the sphinx toolbox extension will work
 github_repository = "any"
-# -- Sphinx extensions -------------------------------------------------------
+
+# -- Sphinx extensions -------------------------------------------------------------------------------------------------
 extensions = [
     "sphinxcontrib.plantuml",
     # "autoapi.extension",
@@ -184,7 +154,7 @@ extensions = [
 plantuml = "java -Djava.awt.headless=true -jar /usr/share/plantuml/plantuml.jar"
 plantuml_output_format = "svg"
 
-# Autoapi
+# Autoapi (deactivated for now because we've got no python code here yet)
 # autoapi_dirs = ["em/docs_as_code_demo"]
 # autoapi_root = "docs/auto_api"
 # autoapi_options = ["members", "undoc-members", "show-inheritance", "show-inheritance-diagram", "show-module-summary"]
