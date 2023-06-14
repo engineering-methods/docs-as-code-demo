@@ -26,6 +26,7 @@ sphinx-book-theme = "^1.0.1"
 doxysphinx = "^3.3.3"
 sphinx-needs = "^1.2.2"
 esbonio = "0.15.0"
+sphinxcontrib-jquery = "^4.1"
 
 [tool.poetry.group.ci]
 optional = true

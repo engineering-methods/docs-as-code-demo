@@ -132,7 +132,6 @@ html_css_files = [f"{html_theme.replace('_', '-')}-custom.css"]
 html_logo = "docs/images/docs-as-code-logo.svg"
 html_favicon = "docs/images/em_favicon_512px.png"
 html_last_updated_fmt = last_updated_from_git()
-
 github_username = "anyone"  # these just need to be set that the sphinx toolbox extension will work
 github_repository = "any"
 
@@ -148,6 +147,7 @@ extensions = [
     "sphinx.ext.inheritance_diagram",
     "sphinx_design",
     "sphinx_needs",
+    "sphinxcontrib.jquery",
 ]
 
 # Plantuml
