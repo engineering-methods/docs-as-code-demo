@@ -15,7 +15,6 @@ python = ">=3.8,<3.12"
 
 [tool.poetry.group.docs.dependencies]
 sphinx = "^6"
-sphinx-needs = "^1.2.2"
 pillow = "^9.5.0"
 myst-parser = "^1.0.0"
 sphinxcontrib-plantuml = "^0.25"
@@ -25,7 +24,8 @@ sphinx-copybutton = "^0.5.2"
 sphinx-design = "^0.4.1"
 sphinx-book-theme = "^1.0.1"
 doxysphinx = "^3.3.3"
-esbonio = "^0.16.1"
+sphinx-needs = "^1.2.2"
+esbonio = "0.15.0"
 
 [tool.poetry.group.ci]
 optional = true

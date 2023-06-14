@@ -13,6 +13,7 @@
         "ExecutableBookProject.myst-highlight",
         "DavidAnson.vscode-markdownlint",
         "tamasfe.even-better-toml",
-        "ritwickdey.LiveServer"
+        "ritwickdey.LiveServer",
+        "lextudio.restructuredtext"
     ]
 }
