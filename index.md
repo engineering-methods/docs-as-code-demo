@@ -46,44 +46,52 @@ It incorporates the following tooling:
 ::::: {grid} 3
 :gutter: 2
 
-``` {grid-item-card} Sphinx
+``` {grid-item-card}
 :link: https://www.sphinx-doc.org/
+:img-top: docs/images/sphinx.png
 
 Sphinx is the documentation generator that is used to build the documentation.
 ```
 
-``` {grid-item-card} Sphinx-Needs
+``` {grid-item-card}
 :link: https://sphinx-needs.readthedocs.io/en/latest/
+:img-top: docs/images/sphinxneeds.png
 
 Sphinx-Needs adds requirements to Sphinx.
 ```
 
-``` {grid-item-card} Sphinx-Book-Theme
+``` {grid-item-card}
 :link: https://sphinx-book-theme.readthedocs.io/
+:img-top: docs/images/booktheme.png
+
 
 The html theme you're just looking at.
 ```
 
-``` {grid-item-card} Myst-Parser
+``` {grid-item-card}
 :link: https://myst-parser.readthedocs.io/
+:img-top: docs/images/myst.png
 
 A sphinx extension that allows writing docs with Markdown- in addition to restructuredText-Syntax (Sphinx default).
 ```
 
-``` {grid-item-card} Doxygen
+``` {grid-item-card}
 :link: https://www.doxygen.nl/
+:img-top: docs/images/doxygen.png
 
 The defacto standard C++ API documentation tool
 ```
 
-``` {grid-item-card} Doxysphinx
+``` {grid-item-card}
 :link: https://boschglobal.github.io/doxysphinx/
+:img-top: docs/images/doxysphinx.png
 
 A tool we co-developed to integrate Doxygen documentations into Sphinx-Documentation.
 ```
 
-``` {grid-item-card} Python
+``` {grid-item-card}
 :link: https://www.python.org/
+:img-top: docs/images/python.png
 
 Last but not least Python, in which Sphinx was developed.
 ```
